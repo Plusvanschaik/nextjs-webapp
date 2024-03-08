@@ -12,12 +12,17 @@ export default function Product(
     }
 ) {
     return (
-        <div>
-            <img src={props.img}/>
-            <h1>{props.title}</h1>
-            <p>{props.description}</p>
-            <p>{props.price}</p>
-            <button>Add</button>
+        <div className="productCard">
+            <img className="productCardImg" src={props.img}/>
+            <div className="productCardDetails">
+                <h5>{props.author}</h5>
+                <h1>{props.title}</h1>
+                <p className="productDescription">{props.description}</p>
+                <div className="productCardAddToCart">
+                    <h3>{props.price}</h3>
+                    <button className="addToCartBtn">Add</button>
+                </div>
+            </div>
         </div>
     )
 }
